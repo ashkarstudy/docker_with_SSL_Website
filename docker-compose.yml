@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  php8site:
+    build: .
+    container_name: php8site
+    volumes:
+      - ${PWD}/website:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
